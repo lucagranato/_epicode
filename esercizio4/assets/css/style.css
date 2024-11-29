@@ -1,0 +1,267 @@
+/* IMPOSTAZIONI GENERALI */
+body{
+    font-family: Poppins, sans-serif;
+    background-image: url("../img/sfondo.png");
+    background-position: center;
+    margin: auto;
+    padding: 1rem;
+}
+
+/* i{
+    display: inline;
+} */
+
+a{
+    color: #0098BA;
+    font-weight: 500;
+}
+
+/* HEADER */
+header{
+    background-image: linear-gradient(#0098BA, #0A6084);
+    text-align: center;
+    padding: 2rem 2rem;
+    text-transform: uppercase;
+    width: 100%;
+    box-shadow: 0px 5px 10px 0px #545454;
+    box-sizing: border-box;
+}
+
+header img{
+    padding-bottom: 1.5rem;
+}
+
+header p{
+    color: white;
+    font-size: 1.2rem;;
+    font-weight: 500;
+    padding-bottom: 1.5rem;
+}
+
+nav li{
+    color: white;
+    line-height: 1.5rem;
+}
+
+nav li::before{content: '⇒ ';}
+
+nav li::after{content: ' ⇐';}
+
+nav a:link{
+    text-decoration: none;
+    color: white;
+    font-size: 1.2rem;;
+    font-weight: 500;
+}
+/* MAIN */
+
+
+/* ELEMENTI NEL MAIN - ARTICLE */
+
+article{
+    background-color: white;
+    box-shadow: 0px 5px 10px 0px #545454;
+    box-sizing: border-box;
+    margin: 1rem 0;
+    padding: 2rem 2rem;
+}
+
+article h1{
+    font-size: 1.7rem;
+    font-weight: 500;
+    line-height: 2rem;
+    padding-bottom: 2rem;
+}
+
+#post-info{
+    color: #a4a4a4;
+    padding-bottom: 2rem;
+}
+
+article > p{
+    padding-bottom: 2rem;
+    line-height: 1.6rem;
+}
+
+article ul{
+    list-style-type: disc;
+    padding-left: 2rem;
+    line-height: 1.5rem;
+    padding-bottom: 2rem; 
+}
+
+article ol{
+    list-style-type: decimal;
+    padding-left: 2rem;
+    line-height: 1.5rem;
+    padding-bottom: 2rem;
+}
+
+p > strong{
+    color: #A2217B;
+    font-weight: 600;
+}
+
+article code{
+    background-color: #e2e2e2;
+    border: 2px solid #d3d3d3;
+    border-radius: 5%;
+}
+
+iframe{
+    border-radius: 10px 10px;
+}
+
+/* TABELLE */
+
+table{
+    text-align: center;
+    align-items: center;
+    width: 100%;
+    box-sizing: border-box;
+    border-bottom: 2px solid #507BCE;
+    margin-bottom: 2rem;
+    box-sizing: border-box;
+}
+
+table caption{
+    font-weight: 600;
+    font-style: italic;
+    padding: 0.1rem
+}
+
+thead tr {
+    color: white;
+    background-color:  #507BCE;
+    height: 4rem;
+    vertical-align: middle;
+
+    }
+
+tr th{
+    box-sizing: border-box;
+    padding: 1rem;
+}
+    
+
+
+tbody tr{
+    height: 4rem;
+}
+tbody tr:nth-child(even){
+    background-color: #efefef;
+    border-top: 2px solid rgb(223, 223, 223);
+    border-bottom: 2px solid rgb(223, 223, 223);
+
+}
+
+tr th, tr td{
+    vertical-align: middle;
+}
+
+.video-container{
+    border-radius: 10%;
+    background-image: ("url");
+}
+
+iframe{
+    border-radius: %;
+    margin: 0;
+    padding-bottom: 1.5rem;
+}
+
+section{
+    background-color: #e4e4e4;
+    margin: 1rem 0;
+    padding: 2rem 2rem;
+}
+
+h2{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    padding-bottom: 1.5rem;
+}
+
+section p{
+    line-height: 1.5rem;
+    padding-bottom: 1.5rem;
+
+}
+
+
+
+/* FORM */
+form > input{
+    display: inline;
+    width: 50%;
+    border: 0;
+    font-size: 1rem;
+    border-bottom:2px dashed rgb(223, 223, 223);
+}
+
+form > button{
+    display: inline;
+    width: 40;
+    padding: 1rem;
+    background-color: #507BCE;
+    color: white;
+    font-weight: 600;
+    border: 0;
+    font-size: 1rem;
+    box-sizing: border-box;
+}
+
+/* ELEMENTI NELL' ASIDE */
+
+aside .featured{
+    background-color: #e4e4e4;
+    margin: 1rem 1rem;
+    padding: 1rem 1rem;
+    border: 2px solid rgb(223, 223, 223);
+    line-height: 1.3rem;
+}
+
+aside p{
+    margin:  0;
+    line-height: 1.5rem;
+}
+
+aside p.post-date{
+    margin-top: 1rem;
+    text-align: right;
+}
+/* 
+aside p:nth-child(3){
+    font-size: 0.9rem;
+    text-align: right;
+    margin:  0;
+} */
+
+/* aside .featured p:nth-child(3){
+    font-size: 1rem;
+    text-align: right;
+} */
+
+
+/* FOOTER */
+footer{
+    background-image: linear-gradient(#026980, #022d3c);
+    color: white;
+    font-size: 0.9rem;
+    text-align: center;
+    padding: 0.8rem 0.8rem;
+    width: 100%;
+    box-shadow: 0px 5px 10px 0px #545454;
+    box-sizing: border-box;
+}
+
+footer a{
+    font-weight: 600;
+    color: #d50396;
+}
+
+footer p, footer address{
+    margin: 0.8rem 0;
+}
