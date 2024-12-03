@@ -67,3 +67,41 @@ console.log(name1 != name2);
 
 name2 = 'john';
 console.log(name1 == name2);
+
+// o anche
+console.log(name1 == name2.toLowerCase());
+
+
+// Esercizi personali
+const hello = 'Hello ';
+let nome = 'Luca';
+  console.log(hello + nome);
+
+let p = '15';
+let l = '13';
+console.log(p === l);
+
+if (p >= l) 
+{console.log('Yes')
+} else {console.log('Not')
+};
+
+if (p != l)
+{console.log('not same')}
+else {console.log('same')}
+
+
+function isDispari(num){
+  let risultato = num % 2;
+  if (risultato == 0) {
+    return false;
+  } else if (risultato == 1){
+    return true;
+  }else{
+    alert('Non è un numero intero');
+  return "";
+  }
+}
+
+console.log(isDispari(2));
+
