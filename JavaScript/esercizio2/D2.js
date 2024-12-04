@@ -138,6 +138,7 @@ if (x > y && x > z){
 console.log(primo, secondo, terzo)
 
 
+
 /* ESERCIZIO 8
   Crea un algoritmo per verificare che un valore fornito sia un numero oppure no (suggerimento: cerca su un motore di ricerca "typeof").
 */
@@ -261,3 +262,41 @@ console.log(myArr)
 
 myArr.unshift(33)
 console.log(myArr)
+
+const value = [1,2,3,4,5];
+let somma = 0;
+
+// cicli for
+ 
+for (let i=0; i < value.length; i++){
+  console.log(somma += value[i])
+}
+
+let arr = ['uno', 'due', 'tre'];
+
+arr.push('quattro');
+arr.shift()
+
+for (let i = 0; i < arr.length; i++){
+  console.log(arr[i])
+}
+
+
+// for in
+for (const key in arr) {
+  console.log(key)
+}
+
+for (const key in arr) {
+  console.log(key, arr[key])
+}
+
+for (const key in arr) {
+  console.log(arr[key] += '!!')
+}
+
+// metodi stringhe
+
+let str = 'Ciao a tutti'
+console.log(str.indexOf('Ciao'))
+console.log(str.indexOf('tutti'))
