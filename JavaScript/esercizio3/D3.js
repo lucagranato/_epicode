@@ -262,7 +262,7 @@ for (i = 0; i < starWarsCharacters.length; i++){
 
 console.log(starWarsCharacters)
 
-// Tip: Fallo con un Array
+// Tip: Fallo con un Array per lavorare sulla copia
 
 let updateCharacters = [];
 
