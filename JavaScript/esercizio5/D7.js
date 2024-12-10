@@ -233,28 +233,96 @@ const movies = [
 
 /* ESERCIZIO 9 (forEach)
   Scrivi una funzione per trovare il film più vecchio nell'array fornito.
+
 */
+
+function getOlderMovie(movies){
+  let oldestMovie = movies[0];
+  movies.forEach(movie => {
+    if(parseInt(movie.Year) < parseInt(oldestMovie.Year)){
+      oldestMovie = movie;
+    }
+  })
+  return oldestMovie.Title
+}
+
+console.log(getOlderMovie(movies))
 
 /* ESERCIZIO 10
   Scrivi una funzione per ottenere il numero di film contenuti nell'array fornito.
+  
 */
+
+function getMoviesNumber(movies) {
+  let moviesNumber = movies.length;
+  return moviesNumber; 
+}
+
+
+console.log(getMoviesNumber(movies))
 
 /* ESERCIZIO 11 (map)
   Scrivi una funzione per creare un array con solamente i titoli dei film contenuti nell'array fornito.
 */
 
+function getMovies(){
+  let moviesNames = movies.map(el => el.Title)
+  return console.log(moviesNames)
+}
+
+getMovies()
+
 /* ESERCIZIO 12 (filter)
   Scrivi una funzione per ottenere dall'array fornito solamente i film usciti nel millennio corrente.
 */
+
+function getMillenialMovies(){
+  let MillennialMovies = movies.filter(el => el.Year > 1999)
+  let titles = MillennialMovies.map(el => el.Title)
+
+  return console.log(titles)
+}
+
+getMillenialMovies()
 
 /* ESERCIZIO 13 (reduce)
   Scrivi una funzione per calcolare la somma di tutti gli anni in cui sono stati prodotti i film contenuti nell'array fornito.
 */
 
+function getYearsSum() {
+  let getSum = movies.reduce((sum, movie) =>{
+    return sum +=parseInt(movie.Year)
+  },0)
+  console.log(getSum)
+}
+
+getYearsSum()
+
 /* ESERCIZIO 14 (find)
   Scrivi una funzione per ottenere dall'array fornito uno specifico film (la funzione riceve un imdbID come parametro).
 */
 
+function findMovie(){
+  let getMovie = movies.find(el => el.imdbID === 'tt0848228')
+
+  console.log(getMovie.Title)
+}
+
+findMovie()
+
 /* ESERCIZIO 15 (findIndex)
   Scrivi una funzione per ottenere dall'array fornito l'indice del primo film uscito nell'anno fornito come parametro.
 */
+
+
+function getFirstMovie(year){
+  let firstMovie = movies.findIndex(el => el.Year === year)
+  if (firstMovie !== -1){
+    let title = movies[firstMovie].Title;
+    console.log(title)
+}else{
+  console.log(`nessun film trovato per l'anno ${year}`)
+}
+}
+
+getFirstMovie('2005')
