@@ -207,42 +207,81 @@ let arrObj = [{
     nome: 'Test',
     quantita: 3,
     prezzo: 25,
+},
+{
+    img: 'http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQqgIxwJ2WQ7Lakca2aSPIiYiqq7i_RHB5mvGqWg-bzDbGO1Z_DQeKL5iorXn9QrAkwLc1iJBxS33dhRFjfvIk',
+    nome: 'Test',
+    quantita: 3,
+    prezzo: 25,
 }]
 
-// const generateTable = function () {
-//    let div = document.querySelector('#tableArea')
-//    let table = document.createElement('table')
-// //    table.innerHTML = `
-// //     <tr>
-// //         <th>immagine</th>
-// //         <th>nome prodotto</th>
-// //         <th>quantità</th>
-// //         <th>prezzo</th>
-// //     </tr>
-// //     <tr>
-// //         <td></td>
-// //         <td></td>
-// //         <td></td>
-// //         <td></td>
-// //     </tr>
-// //    `
-//    for(let i=0; i<5; i++){
-//     let tr = document.createElement('tr')
-//     let td = document.createElement('td')
-//     td.innerHTML = '<img src="'+ arrObj[i].img +'"></img>'
-//     table.appendChild(tr)
-//     tr.appendChild(td)
-//    } 
-//    div.appendChild(table)
-// }
+const generateTable = function () {
+   let div = document.querySelector('#tableArea')
+   let table = document.createElement('table')
+   table.innerHTML = `
+    <tr>
+        <th>immagine</th>
+        <th>nome prodotto</th>
+        <th>quantità</th>
+        <th>prezzo</th>
+    </tr>
+    <tr>
+        <td></td>
+        <td></td>
+        <td></td>
+        <td></td>
+    </tr>
+   `
+   for(let i=0; i<arrObj.length; i++){
+    let tr = document.createElement('tr')
+    let td = document.createElement('td')
+    td.innerHTML = '<img src="'+ arrObj[i].img +'" width="100px"></img>'
+    tr.appendChild(td)
+    let td2 = document.createElement('td')
+    td2.innerHTML = arrObj[i].nome
+    tr.appendChild(td2)
+    let td3 = document.createElement('td')
+    td3.innerHTML = arrObj[i].quantita
+    tr.appendChild(td3)
+    let td4 = document.createElement('td')
+    td4.innerHTML = arrObj[i].prezzo
+    tr.appendChild(td4)
 
-// generateTable()
+
+    table.appendChild(tr)
+
+   } 
+   div.appendChild(table)
+}
+
+generateTable()
 
 /* ESERCIZIO 12
  Crea una funzione che aggiunga una riga alla tabella precedentemente creata e fornisca i dati necessari come parametri
 */
 
-const addRow = function () {}
+const addRow = function (img, nome, quantita, prezzo) {
+    let table = document.querySelector('#tableArea table')
+    let tr = document,createElement('tr')
+
+    let td = document.createElement('td')
+    td.innerHTML = '<img src= "'+ img + '" width="100" />'
+    tr.appendChild(td)
+
+    let td = document.createElement('td')
+    td.innerHTML = nome
+    tr.appendChild(td)
+    
+    let td = document.createElement('td')
+    td.innerHTML = quantita
+    tr.appendChild(td)
+
+    let td = document.createElement('td')
+    td.innerHTML = prezzo
+    tr.appendChild(td)
+}
+
+addRow('http://t1.gstatic.com/licensed-image?q=tbn:ANd9GcQqgIxwJ2WQ7Lakca2aSPIiYiqq7i_RHB5mvGqWg-bzDbGO1Z_DQeKL5iorXn9QrAkwLc1iJBxS33dhRFjfvIk', user, 5, 500)
 
 /* ESERCIZIO 14
 Crea una funzione che nasconda le immagini della tabella quando eseguita
