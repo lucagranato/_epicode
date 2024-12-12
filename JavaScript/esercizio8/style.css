@@ -1,0 +1,73 @@
+*{
+    font-family: Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: rgb(0, 0, 136);
+    color: white;
+}
+
+.container{
+    position: absolute;
+    top:50%;
+    left:50%;
+    transform: translate(-50%,-50%);
+    background-color: blue;
+    text-align: center;
+    padding: 3rem;
+    border-radius: 25px;;
+}
+
+button{
+    background-color: rgb(249, 153, 0);
+    color: white;
+    font-weight: bold;
+    padding: 1rem 2rem;
+    margin: 2rem 0;
+    border-radius: 25px;
+    border: none;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: whitesmoke;
+    color: rgb(0, 0, 136);
+}
+
+button:active{
+    background-color: rgb(213, 213, 213);
+    color: rgb(0, 0, 136);
+}
+
+.gridContainer{
+    text-align: center;
+    font-size: 0; /* Elimina gli spazi tra gli inline-block */
+    padding: 1.5rem 0;
+}
+
+.cell{
+    display: inline-block;
+    font-size: 16px; /* Ripristina la dimensione del testo */
+    font-weight: bold;
+    height: 3rem;
+    width: 3rem;
+    border: 2px solid rgb(255, 255, 255);
+    text-align: center;
+    line-height: 3rem; /* Imposta line-height uguale all'altezza per centrare verticalmente */
+    cursor: pointer;
+}
+
+.cell:hover{
+    background-color: rgb(0, 0, 136);
+}
+
+
+
+.gridContainer2{
+    text-align: center;
+    width: 20rem;
+    font-size: 0; /* Elimina gli spazi tra gli inline-block */
+    padding: 1.5rem 0;
+    margin:  auto;
+}
